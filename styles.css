@@ -24,16 +24,26 @@ p, .about-text, .quote-text, .quote-author {
 
 .main-nav {
   background-color: #000;
-  padding: 25px 40px;
+  padding: 0px 40px;
+  width: 100%;
+  border-bottom: 1px solid #222;
 }
 
 .nav-container {
   max-width: 1440px;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
 }
 
 .nav-logo {
   height: 75px;
+}
+
+.nav-menu {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-left: auto;
 }
 
 .nav-menu .nav-link {
@@ -50,6 +60,53 @@ p, .about-text, .quote-text, .quote-author {
 
 .nav-menu .nav-link:hover {
   color: #f6b88d;
+}
+
+/* ------------------------------------ */
+/* ⭐ FIXED iPHONE 14/15 PRO NAV MEDIA QUERY ⭐ */
+/* EXACTLY LIKE YOUR SCREENSHOT */
+/* ------------------------------------ */
+
+@media screen and (max-width: 500px) {
+
+  .main-nav {
+    padding: 20px 20px;
+  }
+
+  .nav-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  /* Logo stays left EXACTLY like screenshot */
+  .nav-logo {
+    height: 70px;
+  }
+
+  /* Two rows, tight, aligned RIGHT */
+  .nav-menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    width: 70%;
+    row-gap: 12px;
+    column-gap: 20px;
+    margin-left: auto;
+  }
+
+  /* Each item fits its text only (not full width) */
+  .nav-menu .nav-item {
+    flex: 0 0 auto;
+  }
+
+  .nav-menu .nav-link {
+    font-size: 34px;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    line-height: 1;
+  }
 }
 
 /* ------------------------------------ */
@@ -168,14 +225,19 @@ p, .about-text, .quote-text, .quote-author {
   font-size: 15px;
 }
 
+@media (max-width: 768px) {
+  .image-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ------------------------------------ */
 /* ABOUT PAGE */
 /* ------------------------------------ */
 
 .about-page-wrapper {
   background-color: #111411;
-  max-width: 1300px;
-  margin: 40px auto;
+  max-width: 90vw;
   padding: 45px 55px 60px;
 }
 
@@ -199,7 +261,7 @@ p, .about-text, .quote-text, .quote-author {
 }
 
 /* ------------------------------------ */
-/* FIXED IMAGE ROW — ONLY CHANGE YOU NEEDED */
+/* FIXED IMAGE ROW */
 /* ------------------------------------ */
 
 .about-images-row {
@@ -218,15 +280,10 @@ p, .about-text, .quote-text, .quote-author {
   display: block;
 }
 
-/* override bootstrap */
 img.about-img {
   max-width: 100% !important;
   height: 350px !important;
 }
-
-/* ------------------------------------ */
-/* RESPONSIVE */
-/* ------------------------------------ */
 
 @media (max-width: 992px) {
   .about-images-row {
@@ -255,4 +312,79 @@ img.about-img {
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-top: 15px;
+}
+
+/* ====================================================== */
+/* ==================== MENU PAGE ======================== */
+/* ====================================================== */
+
+.menu-panel {
+  background-color: #111411;
+  padding: 50px 70px;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.menu-icon {
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+}
+
+.menu-title {
+  font-family: 'Crimson Pro', serif !important;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  color: #e9b08e;
+  margin-bottom: 30px;
+}
+
+.section-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 35px 0 20px;
+}
+
+.section-title-wrap hr {
+  flex: 1;
+  border: none;
+  border-top: 4px solid #bbf09d;
+}
+
+.section-title {
+  font-family: 'Crimson Pro', serif !important;
+  color: #e9b08e;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px 80px;
+}
+
+.menu-item h3 {
+  font-family: 'Crimson Pro', serif !important;
+  font-weight: 300;
+  font-size: 18px;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.menu-item p {
+  font-family: 'Crimson Pro', serif !important;
+  font-size: 15px;
+  color: #e1e1e1;
+  line-height: 1.45;
+}
+
+@media (max-width: 768px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
 }
