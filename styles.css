@@ -64,7 +64,6 @@ p, .about-text, .quote-text, .quote-author {
 
 /* ------------------------------------ */
 /* ⭐ FIXED iPHONE 14/15 PRO NAV MEDIA QUERY ⭐ */
-/* EXACTLY LIKE YOUR SCREENSHOT */
 /* ------------------------------------ */
 
 @media screen and (max-width: 500px) {
@@ -78,12 +77,10 @@ p, .about-text, .quote-text, .quote-author {
     align-items: flex-start;
   }
 
-  /* Logo stays left EXACTLY like screenshot */
   .nav-logo {
     height: 70px;
   }
 
-  /* Two rows, tight, aligned RIGHT */
   .nav-menu {
     display: flex;
     flex-direction: row;
@@ -95,7 +92,6 @@ p, .about-text, .quote-text, .quote-author {
     margin-left: auto;
   }
 
-  /* Each item fits its text only (not full width) */
   .nav-menu .nav-item {
     flex: 0 0 auto;
   }
@@ -386,5 +382,118 @@ img.about-img {
 @media (max-width: 768px) {
   .menu-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ====================================================== */
+/* ==================== ITEM PAGE ======================== */
+/* ====================================================== */
+
+.item-hero {
+  width: 100%;
+  max-width: 1440px;
+  margin: 40px auto 0;
+  padding: 0 20px;
+}
+
+.item-hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.item-wrapper {
+  background-color: #111411;
+  max-width: 1250px;
+  margin: 40px auto;
+  padding: 50px 50px 65px;
+}
+
+/* TITLE — Crimson Pro Semi-Bold */
+.item-title {
+  font-family: 'Crimson Pro', serif;
+  font-weight: 600;
+  font-size: 38px;
+  color: #e9b08e;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+/* SUBTITLE — Crimson Pro Italic */
+.item-subtitle {
+  font-family: 'Crimson Pro', serif;
+  font-style: italic;
+  font-size: 20px;
+  color: #e9b08e;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* DESCRIPTION — Crimson Pro Regular */
+.item-description {
+  font-family: 'Crimson Pro', serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: #e4e4e4;
+  max-width: 900px;
+  line-height: 1.7;
+  margin: 0 auto 35px;
+}
+
+/* PRICE — Crimson Pro Regular */
+.item-price {
+  font-family: 'Crimson Pro', serif;
+  font-weight: 400;
+  font-size: 32px;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 25px;
+}
+
+/* QUOTE — Crimson Pro Italic */
+.item-quote {
+  font-family: 'Crimson Pro', serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 15px;
+  color: #e4e4e4;
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+/* MOBILE */
+@media (max-width: 500px) {
+
+  .item-hero {
+    margin-top: 20px;
+    padding: 0 10px;
+  }
+
+  .item-wrapper {
+    padding: 30px 22px 45px;
+    margin: 25px 10px;
+  }
+
+  .item-title {
+    font-size: 32px;
+  }
+
+  .item-subtitle {
+    font-size: 18px;
+  }
+
+  .item-description {
+    font-size: 14px;
+  }
+
+  .item-price {
+    font-size: 28px;
+  }
+
+  .item-quote {
+    font-size: 14px;
   }
 }
